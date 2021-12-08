@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.2"
+      fx:controller="com.example.ps_arch_fx.controller.AutoModeController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" minWidth="75.0"/>
+            <ColumnConstraints halignment="CENTER" minWidth="10.0"/>
+            <ColumnConstraints halignment="CENTER" minWidth="10.0"/>
+            <ColumnConstraints halignment="CENTER" minWidth="10.0"/>
+            <ColumnConstraints halignment="CENTER" minWidth="10.0"/>
+            <ColumnConstraints halignment="CENTER" minWidth="10.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0"/>
+            <RowConstraints minHeight="10.0"/>
+            <RowConstraints minHeight="10.0"/>
+            <RowConstraints minHeight="10.0"/>
+            <RowConstraints minHeight="10.0"/>
+            <RowConstraints minHeight="10.0"/>
+        </rowConstraints>
+
+        <Label text="producer number" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="consumer number" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <Label text="buffer size" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3"
+               GridPane.rowIndex="0"/>
+        <Label text="(alpha + beta) / 2" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4"
+               GridPane.rowIndex="0"/>
+        <Label text="lambda" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="0"/>
+
+        <Label text="knockout probability" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0"
+               GridPane.rowIndex="1"/>
+        <Label text="usage coefficient" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0"
+               GridPane.rowIndex="2"/>
+        <Label text="average waiting time" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0"
+               GridPane.rowIndex="3"/>
+        <Label text="average system time" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0"
+               GridPane.rowIndex="4"/>
+        <Label text="average processing time" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0"
+               GridPane.rowIndex="5"/>
+
+
+        <LineChart fx:id="chart_1_1" GridPane.columnIndex="1" GridPane.rowIndex="1" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_2_1" GridPane.columnIndex="2" GridPane.rowIndex="1" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_3_1" GridPane.columnIndex="3" GridPane.rowIndex="1" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_4_1" GridPane.columnIndex="4" GridPane.rowIndex="1" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_5_1" GridPane.columnIndex="5" GridPane.rowIndex="1" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+
+        <LineChart fx:id="chart_1_2" GridPane.columnIndex="1" GridPane.rowIndex="2" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_2_2" GridPane.columnIndex="2" GridPane.rowIndex="2" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_3_2" GridPane.columnIndex="3" GridPane.rowIndex="2" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_4_2" GridPane.columnIndex="4" GridPane.rowIndex="2" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_5_2" GridPane.columnIndex="5" GridPane.rowIndex="2" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="1.0"/>
+            </yAxis>
+        </LineChart>
+
+        <LineChart fx:id="chart_1_3" GridPane.columnIndex="1" GridPane.rowIndex="3" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="2000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_2_3" GridPane.columnIndex="2" GridPane.rowIndex="3" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="2000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_3_3" GridPane.columnIndex="3" GridPane.rowIndex="3" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="2000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_4_3" GridPane.columnIndex="4" GridPane.rowIndex="3" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="2000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_5_3" GridPane.columnIndex="5" GridPane.rowIndex="3" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="2000.0"/>
+            </yAxis>
+        </LineChart>
+
+        <LineChart fx:id="chart_1_4" GridPane.columnIndex="1" GridPane.rowIndex="4" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_2_4" GridPane.columnIndex="2" GridPane.rowIndex="4" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_3_4" GridPane.columnIndex="3" GridPane.rowIndex="4" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_4_4" GridPane.columnIndex="4" GridPane.rowIndex="4" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_5_4" GridPane.columnIndex="5" GridPane.rowIndex="4" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+
+        <LineChart fx:id="chart_1_5" GridPane.columnIndex="1" GridPane.rowIndex="5" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_2_5" GridPane.columnIndex="2" GridPane.rowIndex="5" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_3_5" GridPane.columnIndex="3" GridPane.rowIndex="5" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="10.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_4_5" GridPane.columnIndex="4" GridPane.rowIndex="5" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+        <LineChart fx:id="chart_5_5" GridPane.columnIndex="5" GridPane.rowIndex="5" createSymbols="false">
+            <xAxis>
+                <NumberAxis upperBound="2.0"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" upperBound="7000.0"/>
+            </yAxis>
+        </LineChart>
+    </GridPane>
+</VBox>

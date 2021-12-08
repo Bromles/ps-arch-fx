@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<TabPane xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx"
+         fx:controller="com.example.ps_arch_fx.controller.MainController">
+    <Tab fx:id="parametersTab" text="Parameters" closable="false">
+        <fx:include fx:id="parametersTabPage" source="parameters-view.fxml"/>
+    </Tab>
+    <Tab fx:id="autoModeTab" text="Auto Mode" closable="false">
+        <fx:include fx:id="autoModeTabPage" source="auto-mode-view.fxml"/>
+    </Tab>
+    <Tab fx:id="stepModeTab" text="Step Mode" closable="false">
+        <fx:include fx:id="stepModeTabPage" source="step-mode-view.fxml"/>
+    </Tab>
+    <Tab fx:id="resultsTab" text="Results" closable="false">
+        <fx:include fx:id="resultsTabPage" source="results-view.fxml"/>
+    </Tab>
+</TabPane>

@@ -1,0 +1,7 @@
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+.scroll-bar {
+    -fx-background-color: derive(-fx-base, 45%)
+}
