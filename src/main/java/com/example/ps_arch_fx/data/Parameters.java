@@ -1,4 +1,4 @@
-package com.example.ps_arch_fx.parameters;
+package com.example.ps_arch_fx.data;
 
 public class Parameters {
     private Integer producersNumber;

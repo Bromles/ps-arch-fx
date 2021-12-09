@@ -1,7 +1,5 @@
 package com.example.ps_arch_fx.data;
 
-import com.example.ps_arch_fx.parameters.Parameters;
-
 public class SharedDataHolder {
     private final Parameters parameters;
     private final Parameters defaultParameters;
