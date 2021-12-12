@@ -3,6 +3,7 @@ module com.example.psarchfx {
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
+    requires java.logging;
 
     exports com.example.ps_arch_fx.controller;
     opens com.example.ps_arch_fx.controller to javafx.fxml;

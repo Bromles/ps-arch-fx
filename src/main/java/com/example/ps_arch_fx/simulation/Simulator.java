@@ -3,6 +3,7 @@ package com.example.ps_arch_fx.simulation;
 import com.example.ps_arch_fx.data.SharedDataHolder;
 import com.example.ps_arch_fx.data.SharedSimulationData;
 import com.example.ps_arch_fx.data.SimulationResults;
+import com.example.ps_arch_fx.launcher.Main;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,7 @@ public class Simulator {
 
     public void simulate() {
         initSimulation();
+        Main.log.info("Init simulation");
 
         //Главный цикл программы
         while (simulationData.getTotalGeneratedRequestsNumber() != simulationData.getRequestsNumber()) {
