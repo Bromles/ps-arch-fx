@@ -36,7 +36,7 @@ public record ConsumptionManager(SharedSimulationData simulationData) {
 
             if (!isBuffersEmpty) {
                 Request req = null;
-                int bufferNumber = 0;   //индекс буфера, из которого забрали заявку (далее сдвигаем все заявки влево)
+                int bufferNumber = 0;   //индекс буфера, из которого забрали заявку
                 int producerNumber = 0;
 
                 //Находим заявку, простоявшую в буфере дольше всех
